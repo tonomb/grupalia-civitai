@@ -1,6 +1,6 @@
 import Navbar from "./Navbar";
 import { render, screen } from "@testing-library/react";
-import { act } from "react"; // Corrected import
+import { act } from "react";
 
 describe("<Navbar />", () => {
   it("should render Navbar", () => {
