@@ -1,6 +1,45 @@
-# Getting Started with Create React App
+# Prueba Tecnica Grupalia
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esta tarea es un desafio técnico para la casa que consiste en replicar la UI de una
+página web.
+
+La página que debes replicar es esta: https://civitai.com/images
+
+Debes usar el mismo endpoint que utiliza esa página para obtener las imágenes.
+
+Consideraciones
+
+1. No puedes usar frameworks o librerias de componentes (por ej. Boostrap, MUI
+   etc.) todo debe ser hecho con CSS manualmente. Te recomendamos usar
+   Tailwindcss. Salvo esta restricción, puedes usar cualquier librería para
+   organizar tu código, mientras no sea de componentes o UI.
+2. Debe ser hecho en algún framework de javascript reactivo: puedes usar Vue,
+   React o el que sepas usar mejor.
+3. No es necesario que uses los mismos colores, si se te hace más cómodo
+   utilizar otros, puedes hacerlo. Siéntete libre de meterle de tu cosecha si crees
+   que se puede mejorar la versión original.
+4. No hay límite de tiempo, pero está pensada para hacerla en 2 horas.
+
+A continuación te dejamos algunas imágenes que ilustran qué cosas debes
+replicar y cuales no son necesarias:
+
+![image](https://github.com/tonomb/grupalia-civitai/blob/main/public/assets/civitai-home.png)
+
+Todo lo encerrado en verde es lo que SI debes replicar, mientras que lo que está en rojo no es necesario.
+
+![alt text](https://github.com/tonomb/grupalia-civitai/blob/main/public/assets/civitai-menu.png)
+
+Acá también, lo que está en verde SI lo debes hacer, lo que está en rojo NO debes hacerlo, y lo que está en morado debes hacerlo, pero no es necesario que tenga las mismas funcionalidades: puedes inventar botones nuevos con lo que se te ocurra que aporta valor y es sencillo de implementar. Por ejemplo, un botón podría ser para descargar la imagen, otro botón podría ser para eliminar la imagen del grid, etc.
+Además, debes implementar lo siguiente:
+
+1. Scroll infinito (si usas react-query hay una forma sencilla de hacer esto)
+2. Mientras se carga la imagen, el contenedor debe mantener las dimensiones. No es necesario el efecto de blur mientras se carga, pero no deben cambiar
+   Prueba técnica 3
+   de tamaño los contenedores de las imágenes a medida que van cargando.
+3. Mientras se hace el fetch inicial, se debe mostrar un indicador de que la request está cargando, lo mismo para cuando se scrollea hasta el fondo y se cargan las siguientes imágenes.
+4. para los emojis, basta con que se muestres el conteo de cada emoji, no es necesario que suceda nada al clickearlos.
+   No es necesario que hostees la página en ningún lado, basta con que agregues las instrucciones al README para que yo pueda correrlo localmente. Puedes enviarme el link al repositorio en Github o enviarme un .zip con el código.
+   Éxito
 
 ## Available Scripts
 
@@ -44,4 +83,3 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-# grupalia-civitai
