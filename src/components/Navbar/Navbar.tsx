@@ -6,7 +6,7 @@ export default function Navbar() {
     <div data-testid="navbar" className="p-4 flex flex-row gap-2 align-center">
       <Logo />
       <div className="border border-solid border-[#51CF66] text-[#51CF66] rounded py-1 px-2 flex flex-row">
-        <p>By Tono MB </p>
+        <p>For Grupalia </p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
