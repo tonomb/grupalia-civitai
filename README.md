@@ -33,9 +33,7 @@ Acá también, lo que está en verde SI lo debes hacer, lo que está en rojo NO 
 Además, debes implementar lo siguiente:
 
 1. Scroll infinito (si usas react-query hay una forma sencilla de hacer esto)
-2. Mientras se carga la imagen, el contenedor debe mantener las dimensiones. No es necesario el efecto de blur mientras se carga, pero no deben cambiar
-   Prueba técnica 3
-   de tamaño los contenedores de las imágenes a medida que van cargando.
+2. Mientras se carga la imagen, el contenedor debe mantener las dimensiones. No es necesario el efecto de blur mientras se carga, pero no deben cambiar de tamaño los contenedores de las imágenes a medida que van cargando.
 3. Mientras se hace el fetch inicial, se debe mostrar un indicador de que la request está cargando, lo mismo para cuando se scrollea hasta el fondo y se cargan las siguientes imágenes.
 4. para los emojis, basta con que se muestres el conteo de cada emoji, no es necesario que suceda nada al clickearlos.
    No es necesario que hostees la página en ningún lado, basta con que agregues las instrucciones al README para que yo pueda correrlo localmente. Puedes enviarme el link al repositorio en Github o enviarme un .zip con el código.
