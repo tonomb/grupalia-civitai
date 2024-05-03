@@ -2,36 +2,9 @@ import React, { useState } from "react";
 
 import ImageOption from "../ImageOption/ImageOption";
 import MoreVertical from "../../ui/MoreVertical";
-import Bookmark from "../../ui/bookmark.svg";
-import Eye from "../../ui/eye.svg";
-import Flag from "../../ui/flag.svg";
-import EyeOff from "../../ui/eye-off.svg";
-import Send from "../../ui/send.svg";
+import { imageOptions } from "./imageOptionsConfig";
 
-const imageOptions = [
-  {
-    action: "Save image to collection",
-    icon: Bookmark,
-  },
-  {
-    action: "View Post",
-    icon: Eye,
-  },
-  {
-    action: "Report Image",
-    icon: Flag,
-  },
-  {
-    action: "Hide this Image",
-    icon: EyeOff,
-  },
-  {
-    action: "Hide content from this user",
-    icon: Send,
-  },
-];
-
-export default function ImageOptions() {
+export default function ImageOptions({ imageData }: any) {
   const [moreOptionsVisible, setMoreOptionsVisible] = useState<boolean>(false);
 
   return (
@@ -48,6 +21,7 @@ export default function ImageOptions() {
                 return (
                   <ImageOption
                     imageOption={imageOption}
+                    imageData={imageData}
                     key={imageOption.action}
                   />
                 );

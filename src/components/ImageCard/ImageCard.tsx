@@ -20,7 +20,7 @@ export default function ImageCard({ imageData }: ImageCardProps) {
         alt=""
         className="rounded-lg border border-solid border-[#373a40]"
       />
-      <ImageOptions />
+      <ImageOptions imageData={imageData} />
       <EmojisBar stats={imageData.stats} />
     </div>
   );

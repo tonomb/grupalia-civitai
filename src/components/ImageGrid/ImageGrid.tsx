@@ -29,7 +29,6 @@ export default function ImageGrid() {
       .get("https://civitai.com/api/v1/images")
       .then((response) => {
         const imagesData = response.data.items;
-        console.log(imagesData);
         setImages(imagesData);
       })
       .catch((error) => {
