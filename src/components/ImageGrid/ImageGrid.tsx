@@ -15,6 +15,7 @@ export default function ImageGrid() {
     fetchImages();
   }, []);
 
+  // TODO: Handle Infinite Scroll Using React-query
   function fetchImages(): void {
     axios
       .get("https://civitai.com/api/v1/images")
