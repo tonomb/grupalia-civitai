@@ -1,5 +1,6 @@
 import React from "react";
 import ImageOptions from "../ImageOptions/ImageOptions";
+import EmojisBar, { EmojiBarStats } from "../EmojisBar/EmojisBar";
 
 interface ImageCardProps {
   imageData: ImageData;
@@ -7,6 +8,7 @@ interface ImageCardProps {
 
 interface ImageData {
   url: string;
+  stats: EmojiBarStats;
   [key: string]: any;
 }
 
@@ -19,6 +21,7 @@ export default function ImageCard({ imageData }: ImageCardProps) {
         className="rounded-lg border border-solid border-[#373a40]"
       />
       <ImageOptions />
+      <EmojisBar stats={imageData.stats} />
     </div>
   );
 }

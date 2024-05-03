@@ -5,6 +5,14 @@ import ImageCard from "../ImageCard/ImageCard";
 interface ImagesData {
   id: number;
   url: string;
+  stats: {
+    cryCount: number;
+    laughCount: number;
+    likeCount: number;
+    dislikeCount: number;
+    heartCount: number;
+    commentCount: number;
+  };
   [key: string]: any;
 }
 
@@ -21,7 +29,7 @@ export default function ImageGrid() {
       .get("https://civitai.com/api/v1/images")
       .then((response) => {
         const imagesData = response.data.items;
-
+        console.log(imagesData);
         setImages(imagesData);
       })
       .catch((error) => {
