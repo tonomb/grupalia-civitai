@@ -4,11 +4,19 @@ import ImageOption from "../ImageOption/ImageOption";
 import MoreVertical from "../../ui/MoreVertical";
 import { imageOptions } from "./imageOptionsConfig";
 
+import { useOutsideClick } from "../../hooks/useOutsideClick";
+
 export default function ImageOptions({ imageData }: any) {
   const [moreOptionsVisible, setMoreOptionsVisible] = useState<boolean>(false);
 
+  const ref = useOutsideClick(() => {
+    if (moreOptionsVisible) {
+      setMoreOptionsVisible(!moreOptionsVisible);
+    }
+  });
+
   return (
-    <div className="absolute top-4 right-4  ">
+    <div className="absolute top-4 right-4 " ref={ref}>
       <div className="relative">
         <MoreVertical
           setMoreOptionsVisible={setMoreOptionsVisible}
