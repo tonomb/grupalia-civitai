@@ -37,7 +37,19 @@ Además, debes implementar lo siguiente:
 3. Mientras se hace el fetch inicial, se debe mostrar un indicador de que la request está cargando, lo mismo para cuando se scrollea hasta el fondo y se cargan las siguientes imágenes.
 4. para los emojis, basta con que se muestres el conteo de cada emoji, no es necesario que suceda nada al clickearlos.
    No es necesario que hostees la página en ningún lado, basta con que agregues las instrucciones al README para que yo pueda correrlo localmente. Puedes enviarme el link al repositorio en Github o enviarme un .zip con el código.
-   Éxito
+
+## Running App
+
+The exercise requires [Node.js](https://nodejs.org/en/) to be installed. We recommend using the LTS version.
+
+1. In the repo root directory, run `yarn install` to gather all dependencies.
+
+1. Then run `yarn start` which should start the React client at port 3000.
+
+## Technical Notes
+
+- The frontend was bootstrapped with [Create React App](https://facebook.github.io/create-react-app/docs/getting-started)
+- This project uses `yarn` as the package manager
 
 ## Available Scripts
 
@@ -75,9 +87,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
