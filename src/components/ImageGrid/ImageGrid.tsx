@@ -32,7 +32,7 @@ export default function ImageGrid() {
   return (
     <div
       data-testid="imageGrid"
-      className="columns-1 sm:columns2 lg:columns-3 xl:columns-4 2xl:columns-5 gap-4 p-6 "
+      className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 2xl:columns-5 gap-4 p-6 "
     >
       {images.map((image) => {
         return <ImageCard key={image.id} imageData={image} />;
