@@ -1,5 +1,4 @@
-import React, { ReactElement, useState } from "react";
-import MoreVertical from "../../ui/MoreVertical";
+import React from "react";
 import ImageOptions from "../ImageOptions/ImageOptions";
 
 interface ImageCardProps {
@@ -13,7 +12,7 @@ interface ImageData {
 
 export default function ImageCard({ imageData }: ImageCardProps) {
   return (
-    <div data-testid="image-card" className="rounded-lg relative">
+    <div data-testid="image-card" className="rounded-lg relative mb-4">
       <img
         src={imageData.url}
         alt=""
