@@ -7,6 +7,20 @@ import Download from "../../ui/download.svg";
 
 export const imageOptions = [
   {
+    action: "View Post",
+    icon: Eye,
+    run: function (imageData: any) {
+      const anchor = document.createElement("a");
+      anchor.href = imageData.url;
+
+      document.body.appendChild(anchor);
+
+      anchor.click();
+
+      document.body.removeChild(anchor);
+    },
+  },
+  {
     action: "Share image",
     icon: Send,
     run: function (imageData: any) {
@@ -35,26 +49,19 @@ export const imageOptions = [
       link.click();
       document.body.removeChild(link);
     },
-    //   },
-    //   {
-    //     action: "View Post",
-    //     icon: Eye,
-    //     run: function (imageData: any) {
-    //       console.log(this.action);
-    //     },
-    //   },
-    //   {
-    //     action: "Report Image",
-    //     icon: Flag,
-    //     run: function (imageData: any) {
-    //       console.log(this.action);
-    //     },
-    //   },
-    //   {
-    //     action: "Hide this Image",
-    //     icon: EyeOff,
-    //     run: function (imageData: any) {
-    //       console.log(this.action);
-    //     },
   },
+
+  //   {
+  //     action: "Report Image",
+  //     icon: Flag,
+  //     run: function (imageData: any) {
+  //       console.log(this.action);
+  //     },
+  //   },
+  //   {
+  //     action: "Hide this Image",
+  //     icon: EyeOff,
+  //     run: function (imageData: any) {
+  //       console.log(this.action);
+  //     },
 ];
