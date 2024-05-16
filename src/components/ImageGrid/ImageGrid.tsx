@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { HttpsProxyAgent } from "https-proxy-agent";
 import ImageCard from "../ImageCard/ImageCard";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { useInView } from "react-intersection-observer";
@@ -57,12 +58,16 @@ export default function ImageGrid() {
       let url: any;
 
       if (pageParam === 0) {
-        url = `https://civitai.com/api/v1/images?page=0`;
+        url = `http://localhost:4000/proxy`;
+        // url = `https://civitai.com/api/trpc/image.getInfinite?input=%7B%22json%22%3A%7B%22include%22%3A%5B%22cosmetics%22%5D%2C%22period%22%3A%22Week%22%2C%22sort%22%3A%22Most%20Reactions%22%2C%22types%22%3A%5B%22image%22%5D%2C%22browsingLevel%22%3A1%2C%22cursor%22%3Anull%7D%2C%22meta%22%3A%7B%22values%22%3A%7B%22cursor%22%3A%5B%22undefined%22%5D%7D%7D%7D`;
       } else {
         url = pageParam;
       }
 
       const response = await axios.get(url);
+
+      console.log(response);
+
       return {
         data: response.data.items,
         nextPage: response.data.metadata.nextPage,
